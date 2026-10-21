@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{65BA359A-093B-4D41-B8E1-03398CA978AC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ScopoERP.Core</RootNamespace>
+    <AssemblyName>ScopoERP.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=10.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.10.1.1\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="QRCoder, Version=1.3.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\QRCoder.1.3.3\lib\net40\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Common, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.4.5.0\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\QRCoder.1.3.3\lib\net40\UnityEngine.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commercial\Services\BackToBackLCPaymentLogic.cs" />
+    <Compile Include="Commercial\ViewModels\BackToBackLCHistoryViewModel.cs" />
+    <Compile Include="Commercial\ViewModels\BackToBackLCPaymentViewModel.cs" />
+    <Compile Include="Common\Services\DashboardService.cs" />
+    <Compile Include="Common\Services\DropdownService.cs" />
+    <Compile Include="Commercial\Services\BackToBackLCLogic.cs" />
+    <Compile Include="Commercial\Services\BankForwardingLogic.cs" />
+    <Compile Include="Commercial\Services\BankLogic.cs" />
+    <Compile Include="Commercial\Services\BLLogic.cs" />
+    <Compile Include="Commercial\Services\ExportInvoiceLogic.cs" />
+    <Compile Include="Commercial\Services\JobLogic.cs" />
+    <Compile Include="Commercial\ViewModels\BackToBackLCViewModel.cs" />
+    <Compile Include="Commercial\ViewModels\BankForwardingViewModel.cs" />
+    <Compile Include="Commercial\ViewModels\BankViewModel.cs" />
+    <Compile Include="Commercial\ViewModels\BLViewModel.cs" />
+    <Compile Include="Commercial\ViewModels\ExportInvoiceViewModel.cs" />
+    <Compile Include="Commercial\ViewModels\JobViewModel.cs" />
+    <Compile Include="Common\ViewModels\EmployeeProductionStatusViewModel.cs" />
+    <Compile Include="Enum\AccountTypeHelper.cs" />
+    <Compile Include="Enum\StatusHelper.cs" />
+    <Compile Include="Finance\Services\CostCenterLogic.cs" />
+    <Compile Include="Finance\Services\ParentAccountLogic.cs" />
+    <Compile Include="Finance\Services\RealizationLogic.cs" />
+    <Compile Include="Finance\Services\SubsidiaryAccountLogic.cs" />
+    <Compile Include="Finance\Services\TransactionLogic.cs" />
+    <Compile Include="Finance\ViewModels\CostCenterViewModel.cs" />
+    <Compile Include="Finance\ViewModels\ParentAccountViewModel.cs" />
+    <Compile Include="Finance\ViewModels\RealizationViewModel.cs" />
+    <Compile Include="Finance\ViewModels\SubsidiaryAccountViewModel.cs" />
+    <Compile Include="Finance\ViewModels\TransactionViewModel.cs" />
+    <Compile Include="HR\Services\AttendanceService.cs" />
+    <Compile Include="HR\Services\BankAccountService.cs" />
+    <Compile Include="HR\Services\EducationalQualificationService.cs" />
+    <Compile Include="HR\Services\EmployeeService.cs" />
+    <Compile Include="HR\Services\FineService.cs" />
+    <Compile Include="HR\Services\HolidayService.cs" />
+    <Compile Include="HR\Services\InActiveEmployeeService.cs" />
+    <Compile Include="HR\Services\LeaveService.cs" />
+    <Compile Include="HR\Services\LicenseService.cs" />
+    <Compile Include="HR\Services\LoanService.cs" />
+    <Compile Include="HR\Services\ManPowerBudgetService.cs" />
+    <Compile Include="HR\Services\MedicalRecordService.cs" />
+    <Compile Include="HR\Services\MedicineService.cs" />
+    <Compile Include="HR\Services\PrescriptionService.cs" />
+    <Compile Include="HR\Services\RoasterSetupService.cs" />
+    <Compile Include="HR\Services\SalaryIncrementService.cs" />
+    <Compile Include="HR\Services\SectionService.cs" />
+    <Compile Include="HR\Services\SecurityGuardHolidayService.cs" />
+    <Compile Include="HR\Services\SecurityGuardRosterService.cs" />
+    <Compile Include="HR\Services\SpecialShiftService.cs" />
+    <Compile Include="HR\Services\TaxService.cs" />
+    <Compile Include="HR\ViewModels\AttendanceViewModel.cs" />
+    <Compile Include="HR\ViewModels\BankSalaryViewModel.cs" />
+    <Compile Include="HR\ViewModels\ChangeCardNoViewModel.cs" />
+    <Compile Include="HR\ViewModels\DailyReportFilteringViewModel.cs" />
+    <Compile Include="HR\ViewModels\DailyReportViewModel.cs" />
+    <Compile Include="HR\ViewModels\EducationalQualificationViewModel.cs" />
+    <Compile Include="HR\ViewModels\EmployeeViewModel.cs" />
+    <Compile Include="HR\ViewModels\FineViewModel.cs" />
+    <Compile Include="HR\ViewModels\HolidayViewModel.cs" />
+    <Compile Include="HR\ViewModels\InactiveEmployeeViewModel.cs" />
+    <Compile Include="HR\ViewModels\LeaveApplicationViewModel.cs" />
+    <Compile Include="HR\ViewModels\LeaveBalanceViewModel.cs" />
+    <Compile Include="HR\ViewModels\LicenseViewModel.cs" />
+    <Compile Include="HR\ViewModels\LoanDetailsViewModel.cs" />
+    <Compile Include="HR\ViewModels\LoanVIewModel.cs" />
+    <Compile Include="HR\ViewModels\MappingSalaryListViewModel.cs" />
+    <Compile Include="HR\ViewModels\MappingSalaryViewModel.cs" />
+    <Compile Include="HR\ViewModels\MedicalRecordViewModel.cs" />
+    <Compile Include="HR\ViewModels\MedicineViewModel.cs" />
+    <Compile Include="HR\ViewModels\OneTimeEntryReportViewModel.cs" />
+    <Compile Include="HR\ViewModels\PrescriptionViewModel.cs" />
+    <Compile Include="HR\ViewModels\PromotionViewModel.cs" />
+    <Compile Include="HR\ViewModels\RoasterSetupViewModel.cs" />
+    <Compile Include="HR\ViewModels\SalaryIncrementViewModel.cs" />
+    <Compile Include="HR\ViewModels\SectionBudgetViewModel.cs" />
+    <Compile Include="HR\ViewModels\SectionViewModel.cs" />
+    <Compile Include="HR\ViewModels\SecurityGuardHolidayViewModel.cs" />
+    <Compile Include="HR\ViewModels\SpecialShiftViewModel.cs" />
+    <Compile Include="HR\ViewModels\TaxViewModel.cs" />
+    <Compile Include="HR\ViewModels\VoterViewModel.cs" />
+    <Compile Include="Mapper\MapperProfile.cs" />
+    <Compile Include="Merchant\Services\BookingLogic.cs" />
+    <Compile Include="Merchant\Services\ExcessBookingLogic.cs" />
+    <Compile Include="Merchant\Services\MerchantRequisitionLogic.cs" />
+    <Compile Include="Merchant\ViewModels\ExcessBookingViewModel.cs" />
+    <Compile Include="Merchant\ViewModels\RequisitionViewModel.cs" />
+    <Compile Include="Production\Services\CapacityPlanningLogic.cs" />
+    <Compile Include="Production\Services\DailyEarningLogic.cs" />
+    <Compile Include="Production\Services\FloorLineProductionLogic.cs" />
+    <Compile Include="Production\Services\HourlyProductionService.cs" />
+    <Compile Include="Production\Services\ProductionStatusLogic.cs" />
+    <Compile Include="Production\ViewModels\DailyEarningViewModel.cs" />
+    <Compile Include="Production\ViewModels\FloorLineProductionReportViewModel.cs" />
+    <Compile Include="Production\ViewModels\FloorLineProductionViewModel.cs" />
+    <Compile Include="Production\ViewModels\HourlyProductionStatusViewModel.cs" />
+    <Compile Include="Production\ViewModels\LineBalanceViewModel.cs" />
+    <Compile Include="Production\ViewModels\ProductionStatusViewModel.cs" />
+    <Compile Include="Purchase\Services\PurchaseRequisitionLogic.cs" />
+    <Compile Include="Purchase\ViewModels\PurchaseRequisitionDetailsViewModel.cs" />
+    <Compile Include="Purchase\ViewModels\PurchaseRequisitionViewModel.cs" />
+    <Compile Include="Reports\ViewModels\ArchiveDataReportViewModel.cs" />
+    <Compile Include="Reports\ViewModels\BalanceSheetReportViewModel.cs" />
+    <Compile Include="Reports\ViewModels\BankSalaryPadReportViewModel.cs" />
+    <Compile Include="Reports\ViewModels\ComperativeSummaryReportViewModel.cs" />
+    <Compile Include="Reports\ViewModels\ContractPaperViewModel.cs" />
+    <Compile Include="Reports\ViewModels\DropedNewEmployeeInfoViewModel.cs" />
+    <Compile Include="Reports\ViewModels\DropOutReportViewModel.cs" />
+    <Compile Include="Reports\ViewModels\EarnedLeaveCalculationReportViewModel.cs" />
+    <Compile Include="Reports\ViewModels\EarnLeaveSummaryReportViewModel.cs" />
+    <Compile Include="Reports\ViewModels\EidBonusVIewModel.cs" />
+    <Compile Include="Reports\ViewModels\EmployeeBioDataViewModel.cs" />
+    <Compile Include="Reports\ViewModels\EmployeeIdCardViewModel.cs" />
+    <Compile Include="Reports\ViewModels\EmployeeLeaveHistoryViewModel.cs" />
+    <Compile Include="Reports\ViewModels\HolidayBillViewModel.cs" />
+    <Compile Include="Reports\ViewModels\IncrementReportViewModel.cs" />
+    <Compile Include="Reports\ViewModels\NewRecruitmentViewModel.cs" />
+    <Compile Include="Reports\ViewModels\ProductionReportViewModel.cs" />
+    <Compile Include="Reports\ViewModels\RegisterOfWorkerViewModel.cs" />
+    <Compile Include="Reports\ViewModels\ReportFilteringViewModel.cs" />
+    <Compile Include="Reports\ViewModels\RequisitionPIViewModel.cs" />
+    <Compile Include="Reports\ViewModels\RequisitionPO.cs" />
+    <Compile Include="Reports\ViewModels\RequisitionReportViewModel.cs" />
+    <Compile Include="Reports\ViewModels\RequisitionSAM.cs" />
+    <Compile Include="Reports\ViewModels\SalarySheetViewModel.cs" />
+    <Compile Include="Reports\ViewModels\SalarySummaryViewModel.cs" />
+    <Compile Include="Reports\ViewModels\SecurityGuardRosterViewModel.cs" />
+    <Compile Include="Reports\ViewModels\TiffinBillViewModel.cs" />
+    <Compile Include="Reports\ViewModels\TrialBalanceReportViewModel.cs" />
+    <Compile Include="Reports\ViewModels\WeeklyReportViewModel.cs" />
+    <Compile Include="Settings\Services\ConsumptionUnitLogic.cs" />
+    <Compile Include="Merchant\Services\CostsheetLogic.cs" />
+    <Compile Include="Merchant\Services\ItemCategoryLogic.cs" />
+    <Compile Include="Merchant\Services\ItemLogic.cs" />
+    <Compile Include="Merchant\Services\PurchaseOrderLogic.cs" />
+    <Compile Include="Merchant\Services\SizeColorLogic.cs" />
+    <Compile Include="Merchant\Services\StyleLogic.cs" />
+    <Compile Include="Common\Services\SupportTicketLogic.cs" />
+    <Compile Include="Merchant\ViewModels\BookingViewModel.cs" />
+    <Compile Include="Settings\Services\DefectTypeService.cs" />
+    <Compile Include="Settings\ViewModels\ConsumptionUnitViewModel.cs" />
+    <Compile Include="Merchant\ViewModels\CostsheetViewModel.cs" />
+    <Compile Include="Merchant\ViewModels\ItemCategoryViewModel.cs" />
+    <Compile Include="Merchant\ViewModels\ItemViewModel.cs" />
+    <Compile Include="Merchant\ViewModels\PIViewModel.cs" />
+    <Compile Include="Merchant\ViewModels\PurchaseOrderViewModel.cs" />
+    <Compile Include="Merchant\ViewModels\SizeColorViewModel.cs" />
+    <Compile Include="Merchant\ViewModels\StyleViewModel.cs" />
+    <Compile Include="Common\ViewModels\SupportTicketViewModel.cs" />
+    <Compile Include="Production\Services\JobClassLogic.cs" />
+    <Compile Include="Production\Services\ProductionFloorLogic.cs" />
+    <Compile Include="Production\Services\ProductionPlanningLogic.cs" />
+    <Compile Include="Production\Services\StandardOperationLogic.cs" />
+    <Compile Include="Production\Services\StyleOperationLogic.cs" />
+    <Compile Include="Production\ViewModels\CapacityPlanningViewModel.cs" />
+    <Compile Include="Production\ViewModels\JobClassViewModel.cs" />
+    <Compile Include="Production\ViewModels\ProductionFloorViewModel.cs" />
+    <Compile Include="Production\ViewModels\ProductionPlanViewModel.cs" />
+    <Compile Include="Production\ViewModels\DailyProductionStatusViewModel.cs" />
+    <Compile Include="Production\ViewModels\StandardOperationViewModel.cs" />
+    <Compile Include="Production\ViewModels\StyleOperationViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\Services\ReportLogic.cs" />
+    <Compile Include="Commercial\ViewModels\JobBudgetViewModel.cs" />
+    <Compile Include="Settings\Services\BuyerLogic.cs" />
+    <Compile Include="Settings\Services\CustomerLogic.cs" />
+    <Compile Include="Settings\Services\FactoryLogic.cs" />
+    <Compile Include="Settings\Services\SupplierLogic.cs" />
+    <Compile Include="Common\Services\TimelineLogic.cs" />
+    <Compile Include="Settings\ViewModels\BuyerViewModel.cs" />
+    <Compile Include="Settings\ViewModels\CustomerViewModel.cs" />
+    <Compile Include="Settings\ViewModels\DefectTypeViewModel.cs" />
+    <Compile Include="Common\ViewModels\DropDownListViewModel.cs" />
+    <Compile Include="Settings\ViewModels\FactoryViewModel.cs" />
+    <Compile Include="Settings\ViewModels\ShipmentPerDay.cs" />
+    <Compile Include="Settings\ViewModels\SupplierViewModel.cs" />
+    <Compile Include="Common\ViewModels\TimelineViewModel.cs" />
+    <Compile Include="Store\Services\InventoryIssueLogic.cs" />
+    <Compile Include="Store\Services\InventoryLogic.cs" />
+    <Compile Include="Store\Services\InventoryReceiveLogic.cs" />
+    <Compile Include="Store\ViewModels\chalanexportdetailsViewModel.cs" />
+    <Compile Include="Store\ViewModels\InventoryIssueDetailsViewModel.cs" />
+    <Compile Include="Store\ViewModels\InventoryIssueViewModel.cs" />
+    <Compile Include="Store\ViewModels\InventoryReceiveViewModel.cs" />
+    <Compile Include="Store\ViewModels\InventoryStatusViewModel.cs" />
+    <Compile Include="Store\ViewModels\ShipmentViewModel.cs" />
+    <Compile Include="Store\ViewModels\StockReportViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ScopoERP.Domain\ScopoERP.Domain.csproj">
+      <Project>{d20f07c5-c03a-4aee-a034-744e830c45e7}</Project>
+      <Name>ScopoERP.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>

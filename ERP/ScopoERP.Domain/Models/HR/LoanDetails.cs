@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ScopoERP.Domain.Models.HR
+{
+    public class LoanDetails
+    {
+        public int LoanDetailsID { get; set; }
+        public int LoanID { get; set; }
+        public decimal RepaymentAmount { get; set; }
+        public DateTime RepaymentDate { get; set; }
+    }
+}

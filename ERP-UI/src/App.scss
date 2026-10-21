@@ -1,0 +1,101 @@
+$primary: #0b57d0;
+$secondary: #6f42c1;
+$enable-caret: false;
+$font-size-base: 0.93rem;
+
+@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/_variables";
+
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri&family=Nunito&display=swap");
+
+html,
+body {
+  background: #eaf1fb;
+}
+
+.bangla-font {
+  font-family: "Hind Siliguri", sans-serif;
+}
+
+.nav-item {
+  .nav-link {
+    color: #0f0f0f !important;
+    font-weight: 500;
+  }
+}
+
+.table > :not(:first-child) {
+  border-top: 0;
+}
+
+.table-active {
+  border-left: 6px solid #0b57d0 !important;
+  background-color: #d2e3fc;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 1px #2684ff;
+  border-color: #2684ff;
+}
+
+.form-select:focus {
+  box-shadow: 0 0 0 1px #2684ff;
+  border-color: #2684ff;
+}
+
+button.btn.cancel::before {
+  font-family: fontAwesome;
+  content: "\f00d\00a0";
+}
+
+.fc-day-fri {
+  background-color: rgb(245, 214, 214);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  font-size: 8px;
+}
+
+.break {
+  break-after: column !important;
+}
+
+.action-bar {
+  border: 1px solid rgb(0, 0, 0, 0.176);
+}
+
+input:read-only {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+.offcanvas-body {
+  padding-top: 0;
+}
+
+.aswl-pad {
+  background-image: url("../public/aswl.jpg");
+  height: 305mm;
+  padding: 110px 0px;
+  background-repeat: repeat-y;
+  background-size: 210mm 305mm;
+  background-position-x: center;
+
+  // background-image: url("../public/aswl.jpg");
+  // background-size: cover;
+  // background-position: center; /* Center the background image within the container */
+  // min-height: 100vh; /* Minimum height of the container; adjust as needed */
+  // position: relative;
+  // padding: 110px 0px;
+}
+
+.dmc-pad {
+  background-image: url("../public/dmc.jpg");
+  height: 305mm;
+  padding: 110px 0px;
+  background-repeat: repeat-y;
+  background-size: 210mm 305mm;
+  background-position-x: center;
+}

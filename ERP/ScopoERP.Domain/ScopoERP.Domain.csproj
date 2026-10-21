@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D20F07C5-C03A-4AEE-A034-744E830C45E7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ScopoERP.Domain</RootNamespace>
+    <AssemblyName>ScopoERP.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\account.cs" />
+    <Compile Include="Models\AccPolicyLastNumber.cs" />
+    <Compile Include="Models\AccSysAccountIdentity.cs" />
+    <Compile Include="Models\AccSysAccountType.cs" />
+    <Compile Include="Models\AccSysBranchTypeWiseAccount.cs" />
+    <Compile Include="Models\AccSysGeneratedMethodID.cs" />
+    <Compile Include="Models\Applications.cs" />
+    <Compile Include="Models\backtobacklc.cs" />
+    <Compile Include="Models\backtobacklchistory.cs" />
+    <Compile Include="Models\BackToBackLCPayment.cs" />
+    <Compile Include="Models\bank.cs" />
+    <Compile Include="Models\bankforwarding.cs" />
+    <Compile Include="Models\bl.cs" />
+    <Compile Include="Models\bldetails.cs" />
+    <Compile Include="Models\booking.cs" />
+    <Compile Include="Models\bookinghistory.cs" />
+    <Compile Include="Models\Budget.cs" />
+    <Compile Include="Models\buyerinfo.cs" />
+    <Compile Include="Models\CashFlowHead.cs" />
+    <Compile Include="Models\chalan.cs" />
+    <Compile Include="Models\chalanexport.cs" />
+    <Compile Include="Models\chalanexportdetails.cs" />
+    <Compile Include="Models\Company.cs" />
+    <Compile Include="Models\consumptionunit.cs" />
+    <Compile Include="Models\ContractConditions.cs" />
+    <Compile Include="Models\CoshSheet.cs" />
+    <Compile Include="Models\CostCenter.cs" />
+    <Compile Include="Models\customerinfo.cs" />
+    <Compile Include="Models\DailyEarning.cs" />
+    <Compile Include="Models\DefectType.cs" />
+    <Compile Include="Models\department.cs" />
+    <Compile Include="Models\devision.cs" />
+    <Compile Include="Models\excessbooking.cs" />
+    <Compile Include="Models\factory.cs" />
+    <Compile Include="Models\FinancialYear.cs" />
+    <Compile Include="Models\floorline.cs" />
+    <Compile Include="Models\FloorLineProduction.cs" />
+    <Compile Include="Models\HR\Attendance.cs" />
+    <Compile Include="Models\HR\BankSalary.cs" />
+    <Compile Include="Models\HR\BaseEntity.cs" />
+    <Compile Include="Models\HR\Branch.cs" />
+    <Compile Include="Models\HR\Department.cs" />
+    <Compile Include="Models\HR\Designation.cs" />
+    <Compile Include="Models\HR\Document.cs" />
+    <Compile Include="Models\HR\EducationalQualification.cs" />
+    <Compile Include="Models\HR\Employee.cs" />
+    <Compile Include="Models\HR\Fine.cs" />
+    <Compile Include="Models\HR\Holiday.cs" />
+    <Compile Include="Models\HR\InactiveEmployee.cs" />
+    <Compile Include="Models\HR\LeaveApplication.cs" />
+    <Compile Include="Models\HR\LeaveType.cs" />
+    <Compile Include="Models\HR\License.cs" />
+    <Compile Include="Models\HR\Loan.cs" />
+    <Compile Include="Models\HR\LoanDetails.cs" />
+    <Compile Include="Models\HR\MedicalRecord.cs" />
+    <Compile Include="Models\HR\Medicine.cs" />
+    <Compile Include="Models\HR\MonthlySalary.cs" />
+    <Compile Include="Models\HR\Prescription.cs" />
+    <Compile Include="Models\HR\ProductionFloorLine.cs" />
+    <Compile Include="Models\HR\Promotion.cs" />
+    <Compile Include="Models\HR\SalaryIncrement.cs" />
+    <Compile Include="Models\HR\SalaryMapping.cs" />
+    <Compile Include="Models\HR\SalaryType.cs" />
+    <Compile Include="Models\HR\Section.cs" />
+    <Compile Include="Models\HR\SectionBudget.cs" />
+    <Compile Include="Models\HR\SecurityGuardHoliday.cs" />
+    <Compile Include="Models\HR\SecurityGuardRoster.cs" />
+    <Compile Include="Models\HR\SpecialShift.cs" />
+    <Compile Include="Models\HR\Tax.cs" />
+    <Compile Include="Models\HR\WorkingShift.cs" />
+    <Compile Include="Models\initialcostsheet.cs" />
+    <Compile Include="Models\InventoryIssue.cs" />
+    <Compile Include="Models\InventoryIssueDetails.cs" />
+    <Compile Include="Models\InventoryReceive.cs" />
+    <Compile Include="Models\InventoryTrackings.cs" />
+    <Compile Include="Models\invoice.cs" />
+    <Compile Include="Models\item.cs" />
+    <Compile Include="Models\itemcategory.cs" />
+    <Compile Include="Models\JobClasses.cs" />
+    <Compile Include="Models\jobinfo.cs" />
+    <Compile Include="Models\Memberships.cs" />
+    <Compile Include="Models\OperationCategories.cs" />
+    <Compile Include="Models\Operations.cs" />
+    <Compile Include="Models\ParentAccount.cs" />
+    <Compile Include="Models\paymenttype.cs" />
+    <Compile Include="Models\piinfo.cs" />
+    <Compile Include="Models\pocostsheet.cs" />
+    <Compile Include="Models\postyle.cs" />
+    <Compile Include="Models\productionplanning.cs" />
+    <Compile Include="Models\DailyProductionStatus.cs" />
+    <Compile Include="Models\HourlyProductionStatus.cs" />
+    <Compile Include="Models\Profiles.cs" />
+    <Compile Include="Models\PurchaseRequisition.cs" />
+    <Compile Include="Models\PurchaseRequisitionDetail.cs" />
+    <Compile Include="Models\realization.cs" />
+    <Compile Include="Models\realizationaccount.cs" />
+    <Compile Include="Models\requisition.cs" />
+    <Compile Include="Models\Roles.cs" />
+    <Compile Include="Models\StyleOperations.cs" />
+    <Compile Include="Repositories\HRContext.cs" />
+    <Compile Include="Repositories\ScopoContext.cs" />
+    <Compile Include="Models\season.cs" />
+    <Compile Include="Models\shipment.cs" />
+    <Compile Include="Models\sizecolor.cs" />
+    <Compile Include="Models\StoreIssue.cs" />
+    <Compile Include="Models\StoreReceive.cs" />
+    <Compile Include="Models\styleinfo.cs" />
+    <Compile Include="Models\SubsidiaryAccount.cs" />
+    <Compile Include="Models\supplier.cs" />
+    <Compile Include="Models\SupportTicketSystems.cs" />
+    <Compile Include="Models\Timelines.cs" />
+    <Compile Include="Models\Transaction.cs" />
+    <Compile Include="Models\TransactionDetail.cs" />
+    <Compile Include="Models\TransactionSummary.cs" />
+    <Compile Include="Models\TransactionSummaryDaily.cs" />
+    <Compile Include="Models\TransactionUnposted.cs" />
+    <Compile Include="Models\TransactionUnpostedDetail.cs" />
+    <Compile Include="Models\useraccount.cs" />
+    <Compile Include="Models\Users.cs" />
+    <Compile Include="Models\VoucherType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\IRepository.cs" />
+    <Compile Include="Repositories\Repository.cs" />
+    <Compile Include="Repositories\UnitOfWork.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\GetO2_Function.sql" />
+    <Content Include="Scripts\GetO6_Function.sql" />
+    <Content Include="Scripts\GumSheetData_Proceduresql.sql" />
+    <Content Include="Scripts\GumSheetOffStandardData_Proceduresql.sql" />
+    <Content Include="Scripts\Production_Incentive_Script.sql" />
+    <Content Include="StoredProcedures\PostSheet.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
